@@ -1,0 +1,22 @@
+@import "external";
+//@import "theme";
+
+body { overflow-x: hidden; }
+
+.navbar
+{
+  margin-bottom: 0 !important;
+  .navbar-inner {
+    padding: 0 !important;
+    div { margin-left: 1em !important; }
+  }
+}
+.map-slider {
+  width: 75%;
+  margin: auto;
+}
+
+#filter-result {
+  margin-top: 1em;
+  margin-right: 1em;
+}
