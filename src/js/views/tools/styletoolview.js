@@ -14,7 +14,7 @@
         return this;
       },
       refilter: function() {
-        $('[id^=map_layer]').not('#map_layers').css('webkit-filter', this.filters);
+        $('[id^=map_layer] img').not('#map_layers').css('webkit-filter', this.filters);
         return $('#filter-result').text("-webkit-filter: " + this.filters + ";");
       },
       ready: function() {
@@ -31,7 +31,7 @@
         apply_filters = function() {
           _this.filters = "" + hue_rotate + " " + grayscale + " " + sepia + " " + brightness + " " + contrast + " " + invert + " " + saturate;
           if (_this.filters.length < 4) _this.filters = "";
-          $('[id^=map_layer]').not('#map_layers').css('webkit-filter', _this.filters);
+          $('[id^=map_layer] img').not('#map_layers').css('webkit-filter', _this.filters);
           return $('#filter-result').text("-webkit-filter: " + _this.filters + ";");
         };
         $('#hue-rotate').slider({

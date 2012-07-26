@@ -17,7 +17,7 @@ define [
       @
 
     refilter: ->
-      $('[id^=map_layer]').not('#map_layers').css 'webkit-filter', @filters
+      $('[id^=map_layer] img').not('#map_layers').css 'webkit-filter', @filters
       $('#filter-result').text "-webkit-filter: #{@filters};"
 
 
@@ -35,7 +35,7 @@ define [
       apply_filters = =>
         @filters = "#{hue_rotate} #{grayscale} #{sepia} #{brightness} #{contrast} #{invert} #{saturate}"
         if @filters.length < 4 then @filters = ""
-        $('[id^=map_layer]').not('#map_layers').css 'webkit-filter', @filters
+        $('[id^=map_layer] img').not('#map_layers').css 'webkit-filter', @filters
         $('#filter-result').text "-webkit-filter: #{@filters};"
 
       $('#hue-rotate').slider(
