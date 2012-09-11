@@ -50,7 +50,6 @@
   require(['jquery', 'app', 'dojo/ready'], function($, App, ready) {
     return $(document).ready(function() {
       return ready(function() {
-        esri.config.defaults.io.proxyUrl = "proxy.php";
         return App.initialize();
       });
     });
