@@ -42,7 +42,7 @@ require
     main: "app"
    ]
 
-define.amd.jQuery = true
-require ['app'], (App) ->
-	console.log "load init"
-	App.initialize()
+require ['jquery', 'app', 'dojo/ready'], ($, App, ready) ->
+  $(document).ready ->
+    ready ->
+      App.initialize()
